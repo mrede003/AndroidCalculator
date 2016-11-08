@@ -27,7 +27,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_send"
+        android:text="mred"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
         android:onClick="sendMessageUpper"
@@ -35,14 +35,14 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/button_send"
+        android:text="@string/backspace"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
         android:onClick="sendMessageUpper"
         />
     <Button
         android:layout_height="wrap_content"
-        android:text="@string/button_send"
+        android:text="@string/clear"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
         android:onClick="sendMessageUpper"
@@ -50,7 +50,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_send"
+            android:text="@string/divide"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:onClick="sendMessageUpper"
@@ -58,22 +58,14 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_send"
+            android:text="@string/percent"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:onClick="sendMessageUpper"
             />
         <Button
             android:layout_height="wrap_content"
-            android:text="@string/button_send"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/button_send"
+            android:text="@string/left_parentheses"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:onClick="sendMessageUpper"
@@ -81,14 +73,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_send"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
-            />
-        <Button
-            android:layout_height="wrap_content"
-            android:text="@string/button_send"
+            android:text="@string/right_parentheses"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:onClick="sendMessageUpper"
@@ -96,7 +81,14 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_send"
+            android:text="@string/multiply"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:onClick="sendMessageUpper"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:text="@string/seven"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:onClick="sendMessageUpper"
@@ -104,14 +96,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_send"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
-            />
-        <Button
-            android:layout_height="wrap_content"
-            android:text="@string/button_send"
+            android:text="@string/eight"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:onClick="sendMessageUpper"
@@ -119,7 +104,14 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_send"
+            android:text="@string/nine"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:onClick="sendMessageUpper"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:text="@string/subtract"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:onClick="sendMessageUpper"
@@ -127,14 +119,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_send"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
-            />
-        <Button
-            android:layout_height="wrap_content"
-            android:text="@string/button_send"
+            android:text="@string/four"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:onClick="sendMessageUpper"
@@ -142,7 +127,14 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_send"
+            android:text="@string/five"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:onClick="sendMessageUpper"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:text="@string/six"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:onClick="sendMessageUpper"
@@ -150,14 +142,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_send"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
-            />
-        <Button
-            android:layout_height="wrap_content"
-            android:text="@string/button_send"
+            android:text="@string/add"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:onClick="sendMessageUpper"
@@ -165,7 +150,14 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_send"
+            android:text="@string/one"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:onClick="sendMessageUpper"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:text="@string/two"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:onClick="sendMessageUpper"
@@ -173,14 +165,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_send"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
-            />
-        <Button
-            android:layout_height="wrap_content"
-            android:text="@string/button_send"
+            android:text="@string/three"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:onClick="sendMessageUpper"
@@ -188,7 +173,14 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_send"
+            android:text="@string/equals"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:onClick="sendMessageUpper"
+            />
+        <Button
+            android:layout_height="wrap_content"
+            android:text="@string/negate"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:onClick="sendMessageUpper"
@@ -196,17 +188,20 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_send"
+            android:text="@string/zero"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:onClick="sendMessageUpper"
             />
         <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_send"
+            android:text="@string/decimal"
             android:layout_columnWeight="1"
+            
             android:layout_rowWeight="1"
             android:onClick="sendMessageUpper"
             />
+
 </GridLayout>
 </LinearLayout>
