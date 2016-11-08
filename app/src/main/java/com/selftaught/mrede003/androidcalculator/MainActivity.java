@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     {
         EditText editText=(EditText) findViewById(R.id.edit_message_upper);
 
-        editText.setText(editText.getText().toString().toUpperCase());
+        editText.setText(editText.getText().toString().toLowerCase());
     }
 
 }
