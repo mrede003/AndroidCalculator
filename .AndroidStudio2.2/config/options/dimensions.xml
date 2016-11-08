@@ -1,0 +1,32 @@
+<application>
+  <component name="DimensionService">
+    <location key="WELCOME_SCREEN.0.0.1920.1080" x="893" y="236" />
+    <location key="com.intellij.ide.util.TipDialog.0.0.1920.1080" x="703" y="647" />
+    <location key="deploy.picker.dialog.0.0.1920.1080" x="675" y="614" />
+    <location key="SettingsEditor.0.0.1920.1080" x="461" y="261" />
+    <location key="idPropertyDimension.0.0.1920.1080" x="763" y="493" />
+    <location key="ProcessPopupWindow.0.0.1920.1080" x="1451" y="933" />
+    <location key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog.0.0.1920.1080" x="725" y="332" />
+    <location key="CommitChangelistDialog2.0.0.1920.1080" x="626" y="502" />
+    <location key="Github.ShareDialog.0.0.1920.1080" x="770" y="451" />
+    <location key="Vcs.Push.Dialog.0.0.1920.1080" x="680" y="339" />
+    <location key="DiffContextDialog.0.0.1920.1080" x="65" y="234" />
+    <location key="FileChooserDialogImpl.0.0.1920.1080" x="764" y="401" />
+    <location key="com.intellij.openapi.vcs.changes.UnversionedViewDialog.0.0.1920.1080" x="773" y="339" />
+    <size key="deploy.picker.dialog.0.0.1920.1080" width="624" height="466" />
+    <size key="GridCell.Tab.0.left.0.0.1920.1080" width="1809" height="281" />
+    <size key="GridCell.Tab.0.center.0.0.1920.1080" width="1809" height="281" />
+    <size key="GridCell.Tab.0.right.0.0.1920.1080" width="1809" height="281" />
+    <size key="GridCell.Tab.0.bottom.0.0.1920.1080" width="1809" height="281" />
+    <size key="SettingsEditor.0.0.1920.1080" width="1052" height="664" />
+    <size key="idPropertyDimension.0.0.1920.1080" width="449" height="144" />
+    <size key="ProcessPopupWindow.0.0.1920.1080" width="201" height="121" />
+    <size key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog.0.0.1920.1080" width="524" height="466" />
+    <size key="CommitChangelistDialog2.0.0.1920.1080" width="722" height="573" />
+    <size key="Github.ShareDialog.0.0.1920.1080" width="434" height="228" />
+    <size key="Vcs.Push.Dialog.0.0.1920.1080" width="615" height="564" />
+    <size key="DiffContextDialog.0.0.1920.1080" width="1484" height="844" />
+    <size key="FileChooserDialogImpl.0.0.1920.1080" width="447" height="495" />
+    <size key="com.intellij.openapi.vcs.changes.UnversionedViewDialog.0.0.1920.1080" width="429" height="508" />
+  </component>
+</application>

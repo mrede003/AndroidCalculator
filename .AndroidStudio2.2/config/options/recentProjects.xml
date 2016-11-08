@@ -1,0 +1,67 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="recentPaths">
+      <list>
+        <option value="$USER_HOME$/AndroidStudioProjects/AndroidCalculator" />
+        <option value="$USER_HOME$/AndroidStudioProjects/MyFirstApp" />
+        <option value="$USER_HOME$/AndroidStudioProjects/PdfRendererBasic" />
+        <option value="$USER_HOME$/AndroidStudioProjects/MyFirstapplication" />
+      </list>
+    </option>
+    <option name="openPaths">
+      <list>
+        <option value="$USER_HOME$/AndroidStudioProjects/AndroidCalculator" />
+      </list>
+    </option>
+    <option name="lastPath" value="$USER_HOME$/AndroidStudioProjects/AndroidCalculator" />
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/AndroidStudioProjects/AndroidCalculator">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-145.3360264" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1478628039997" />
+              <option name="buildTimestamp" value="1476763200000" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/MyFirstApp">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-145.3360264" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1478556500935" />
+              <option name="buildTimestamp" value="1476763200000" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/MyFirstapplication">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-145.3360264" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1477957947200" />
+              <option name="buildTimestamp" value="1476763200000" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/AndroidStudioProjects/PdfRendererBasic">
+          <value>
+            <RecentProjectMetaInfo>
+              <option name="build" value="AI-145.3360264" />
+              <option name="productionCode" value="AI" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="projectOpenTimestamp" value="1478538146743" />
+              <option name="buildTimestamp" value="1476763200000" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastProjectLocation" value="$USER_HOME$/AndroidStudioProjects" />
+  </component>
+</application>
