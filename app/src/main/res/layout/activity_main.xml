@@ -5,18 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <EditText
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/main_display"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
+        android:hint="@string/main_display_hint"
+        android:gravity="right"
         android:textSize="40dp" />
 
-    <EditText
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/sub_display"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"
-        android:textSize="20dp"
-        android:id="@+id/editText" />
+        android:gravity="right"
+        android:textSize="20dp"/>
 
     <GridLayout
     android:layout_width="match_parent"
@@ -30,7 +34,6 @@
         android:text="mred"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:onClick="sendMessageUpper"
         />
     <Button
         android:layout_width="wrap_content"
@@ -38,14 +41,14 @@
         android:text="@string/backspace"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:onClick="sendMessageUpper"
+        android:onClick="backspace"
         />
     <Button
         android:layout_height="wrap_content"
         android:text="@string/clear"
         android:layout_columnWeight="1"
         android:layout_rowWeight="1"
-        android:onClick="sendMessageUpper"
+        android:onClick="clear"
         />
         <Button
             android:layout_width="wrap_content"
@@ -53,7 +56,7 @@
             android:text="@string/divide"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
+            android:onClick="displayOperation"
             />
         <Button
             android:layout_width="wrap_content"
@@ -61,14 +64,12 @@
             android:text="@string/percent"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
             />
         <Button
             android:layout_height="wrap_content"
             android:text="@string/left_parentheses"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
             />
         <Button
             android:layout_width="wrap_content"
@@ -76,7 +77,6 @@
             android:text="@string/right_parentheses"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
             />
         <Button
             android:layout_width="wrap_content"
@@ -84,14 +84,14 @@
             android:text="@string/multiply"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
+            android:onClick="displayOperation"
             />
         <Button
             android:layout_height="wrap_content"
             android:text="@string/seven"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
+            android:onClick="displayNumber"
             />
         <Button
             android:layout_width="wrap_content"
@@ -99,7 +99,7 @@
             android:text="@string/eight"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
+            android:onClick="displayNumber"
             />
         <Button
             android:layout_width="wrap_content"
@@ -107,14 +107,14 @@
             android:text="@string/nine"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
+            android:onClick="displayNumber"
             />
         <Button
             android:layout_height="wrap_content"
             android:text="@string/subtract"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
+            android:onClick="displayOperation"
             />
         <Button
             android:layout_width="wrap_content"
@@ -122,7 +122,7 @@
             android:text="@string/four"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
+            android:onClick="displayNumber"
             />
         <Button
             android:layout_width="wrap_content"
@@ -130,14 +130,14 @@
             android:text="@string/five"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
+            android:onClick="displayNumber"
             />
         <Button
             android:layout_height="wrap_content"
             android:text="@string/six"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
+            android:onClick="displayNumber"
             />
         <Button
             android:layout_width="wrap_content"
@@ -145,7 +145,7 @@
             android:text="@string/add"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
+            android:onClick="displayOperation"
             />
         <Button
             android:layout_width="wrap_content"
@@ -153,14 +153,14 @@
             android:text="@string/one"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
+            android:onClick="displayNumber"
             />
         <Button
             android:layout_height="wrap_content"
             android:text="@string/two"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
+            android:onClick="displayNumber"
             />
         <Button
             android:layout_width="wrap_content"
@@ -168,7 +168,7 @@
             android:text="@string/three"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
+            android:onClick="displayNumber"
             />
         <Button
             android:layout_width="wrap_content"
@@ -176,14 +176,13 @@
             android:text="@string/equals"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
+            android:onClick="equals"
             />
         <Button
             android:layout_height="wrap_content"
             android:text="@string/negate"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
             />
         <Button
             android:layout_width="wrap_content"
@@ -191,16 +190,14 @@
             android:text="@string/zero"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
+            android:onClick="displayNumber"
             />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/decimal"
             android:layout_columnWeight="1"
-            
             android:layout_rowWeight="1"
-            android:onClick="sendMessageUpper"
             />
 
 </GridLayout>
