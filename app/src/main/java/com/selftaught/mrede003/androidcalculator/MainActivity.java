@@ -1,12 +1,9 @@
 package com.selftaught.mrede003.androidcalculator;
 
-
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.Stack;
@@ -53,8 +50,7 @@ public class MainActivity extends AppCompatActivity {
     {
         TextView subDisplay=(TextView) findViewById(R.id.sub_display);
         String answer=subDisplay.getText().toString();
-        answer=answer.replaceAll("\\s","");
-        subDisplay.setText(answer);
+        subDisplay.setText(infixToPostfix(answer));
         
     }
     public String analyzeEquation(String equation)
@@ -103,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder sb=new StringBuilder();
         Stack<Integer> stack=new Stack();
 
-        for(String token: equation.split("//s"))        //split equation at space into string array
+        for(String token: equation.split(" "))        //split equation at space into string array
         {                                               //for every string in the array.....
             if(token.isEmpty())                         //if string is "" continue
                 continue;
@@ -114,17 +110,33 @@ public class MainActivity extends AppCompatActivity {
             {
                 if(stack.isEmpty())
                 {
-                    stack.push(index)
+                    stack.push(index);
                 }else{
-                    while(!stack.isEmpty())
-                    {
-
+                    while(!stack.isEmpty()) {
+                        int op2 = stack.peek() / 2;
+                        int op1 = index / 2;
+                        if (op2 > op1 || (op2 == op1 && c != '^'))
+                            sb.append(ops.charAt(stack.pop())).append(' ');
+                        else break;
                     }
+                    stack.push(index);
                 }
             }
-
-
+            else if(c=='('){
+                stack.push(-2);
+            }
+            else if(c==')'){
+                while(stack.peek()!=-2)
+                    sb.append(ops.charAt(stack.pop())).append(' ');
+                stack.pop();
+            }
+            else{
+                sb.append(token).append(' ');
+            }
         }
+        while(!stack.isEmpty())
+            sb.append(ops.charAt(stack.pop())).append(' ');
+        return sb.toString();
     }
 
 }
