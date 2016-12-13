@@ -24,6 +24,7 @@
     <string name="left_parentheses">(</string>
     <string name="right_parentheses">)</string>
     <string name="main_display_hint">Type Something!</string>
+    <string name="exponent">^</string>
 
 
 
