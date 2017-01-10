@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 stack.push(evaluate(token,a, b));
             }
         }
-        subDisplay.setText(stack.pop().toString());
+        subDisplay.setText(fmt(stack.pop()));
         mainDisplay.setText(subDisplay.getText().toString());
     }
     public Double evaluate(String op, Double a, Double b)
@@ -168,6 +168,15 @@ public class MainActivity extends AppCompatActivity {
         while(!stack.isEmpty())
             sb.append(ops.charAt(stack.pop())).append(' ');
         return sb.toString();
+    }
+    //Quick static method to display int stored as double as ints
+    //and doubles with minimum precision
+    public static String fmt(double d)
+    {
+        if(d == (long) d)
+            return String.format("%d",(long)d);
+        else
+            return String.format("%s",d);
     }
 
 }
