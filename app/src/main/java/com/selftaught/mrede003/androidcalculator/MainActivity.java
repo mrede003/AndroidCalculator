@@ -1,17 +1,14 @@
 package com.selftaught.mrede003.androidcalculator;
 
-
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
+
 
 import java.util.Stack;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,29 +49,53 @@ public class MainActivity extends AppCompatActivity {
     public void equals(View view)
     {
         TextView subDisplay=(TextView) findViewById(R.id.sub_display);
-        String answer=subDisplay.getText().toString();
-        answer=answer.replaceAll("\\s","");
-        subDisplay.setText(answer);
-        
+        TextView mainDisplay=(TextView) findViewById(R.id.main_display);
+        String equation=subDisplay.getText().toString();
+        equation=infixToPostfix(equation);
+        Stack<Double> stack=new Stack();
+        for(String token: equation.split(" "))
+        {
+            if(!isOperand(token))
+                stack.push(Double.parseDouble(token));
+            if(isOperand(token))
+            {
+                Double a=stack.pop();
+                Double b=stack.pop();
+                stack.push(evaluate(token,a, b));
+            }
+        }
+        subDisplay.setText(fmt(stack.pop()));
+        mainDisplay.setText(subDisplay.getText().toString());
     }
-    public String analyzeEquation(String equation)
+    public Double evaluate(String op, Double a, Double b)
     {
-        int num1,num2;
-        num1=equation.toCharArray()[0];
-
-
-        return equation;
+        if(op.equals("-"))
+            return (b-a);
+        if(op.equals("+"))
+            return (b+a);
+        if(op.equals("*"))
+            return (b*a);
+        if(op.equals("/"))
+            return (b/a);
+        if(op.equals("^"))
+            return Math.pow(b, a);
+        return -1.0;
     }
     public void backspace(View view)
     {
         TextView mainDisplay=(TextView) findViewById(R.id.main_display);
         TextView subDisplay=(TextView) findViewById(R.id.sub_display);
-        if(mainDisplay.getText().toString().equals("")) return;
-
-        mainDisplay.setText((mainDisplay.getText()
+        if(!mainDisplay.getText().toString().equals(""))
+            mainDisplay.setText((mainDisplay.getText()
                 .toString()).substring(0, mainDisplay.getText().toString().length()-1));
-        subDisplay.setText((subDisplay.getText()
-                .toString()).substring(0, subDisplay.getText().toString().length()-1));
+        int offset=2;
+        if(!subDisplay.getText().toString().equals("")) {
+            if (subDisplay.getText().toString().length() < 2)
+                offset = 1;
+
+            subDisplay.setText((subDisplay.getText()
+                    .toString()).substring(0, subDisplay.getText().toString().length() - offset));
+        }
     }
     public void displayOperation(View view)
     {
@@ -88,12 +109,19 @@ public class MainActivity extends AppCompatActivity {
             subDisplay.setText(subDisplay.getText()+" "+b.getText().toString());
         }
     }
+    public void displayParentheses(View view)
+    {
+        TextView subDisplay=(TextView) findViewById(R.id.sub_display);
+        Button b=(Button)view;
+        subDisplay.setText(subDisplay.getText()+" "+b.getText().toString()+" ");
+    }
     public boolean isOperand(String t)
     {
         if(t.equals(getString(R.string.divide))||
                 t.equals(getString(R.string.multiply))||
                     t.equals(getString(R.string.add))||
-                            t.equals(getString(R.string.subtract)))
+                            t.equals(getString(R.string.subtract))||
+                                t.equals(getString(R.string.exponent)))
             return true;
         return false;
     }
@@ -103,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
         StringBuilder sb=new StringBuilder();
         Stack<Integer> stack=new Stack();
 
-        for(String token: equation.split("//s"))        //split equation at space into string array
+        for(String token: equation.split(" "))        //split equation at space into string array
         {                                               //for every string in the array.....
             if(token.isEmpty())                         //if string is "" continue
                 continue;
@@ -114,17 +142,42 @@ public class MainActivity extends AppCompatActivity {
             {
                 if(stack.isEmpty())
                 {
-                    stack.push(index)
+                    stack.push(index);
                 }else{
-                    while(!stack.isEmpty())
-                    {
-
+                    while(!stack.isEmpty()) {
+                        int op2 = stack.peek() / 2;
+                        int op1 = index / 2;
+                        if (op2 > op1 || (op2 == op1 && c != '^'))
+                            sb.append(ops.charAt(stack.pop())).append(' ');
+                          else break;
                     }
+                    stack.push(index);
                 }
             }
-
-
+            else if(c=='('){
+                stack.push(-2);
+            }
+            else if(c==')'){
+                while(stack.peek()!=-2)
+                    sb.append(ops.charAt(stack.pop())).append(' ');
+                stack.pop();
+            }
+            else{
+                sb.append(token).append(' ');
+            }
         }
+        while(!stack.isEmpty())
+            sb.append(ops.charAt(stack.pop())).append(' ');
+        return sb.toString();
+    }
+    //Quick static method to display int stored as double as ints
+    //and doubles with minimum precision
+    public static String fmt(double d)
+    {
+        if(d == (long) d)
+            return String.format("%d",(long)d);
+        else
+            return String.format("%s",d);
     }
 
 }
